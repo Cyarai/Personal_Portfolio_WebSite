@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Loading Animation -->
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <h2>Excel Montenegro</h2>
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="header">
+      <div id="particles"></div>
+      <div class="container">
+        <h1>Excel Montenegro</h1>
+        <p>Welcome to my creative portfolio!</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <img src="pic1.jpg" alt="Your Photo" />
+        <!-- Replace with your photo URL -->
+        <p>
+          Hi, I'm Excel Montenegro, a Web developer passionate about building
+          and designing a website. I love creating innovative solutions and
+          bringing ideas to life. Feel free to explore my projects below!
+        </p>
+      </section>
+
+      <section id="skills" class="fade-in">
+        <h2>Skills</h2>
+        <div class="skill-list">
+          <div class="skill" onclick="toggleSkill(this)">
+            <span>HTML</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill" onclick="toggleSkill(this)">
+            <span>CSS</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill" onclick="toggleSkill(this)">
+            <span>JavaScript</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill" onclick="toggleSkill(this)">
+            <span>[Add your skill]</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%"></div>
+            </div>
+          </div>
+          <!-- Add more skills by duplicating this div -->
+        </div>
+      </section>
+
+      <section id="projects" class="fade-in">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+          <div
+            class="project-card"
+            onclick="
+              openModal(
+                'Project Title 1',
+                'Description of your first project. What technologies did you use? What was the goal?',
+                'https://via.placeholder.com/300x200',
+              )
+            "
+          >
+            <img src="#" alt="Project 1" />
+            <!-- Replace with project image -->
+            <h3>Project Title 1</h3>
+            <p>
+              Description of your first project. What technologies did you use?
+              What was the goal?
+            </p>
+            <a href="#" target="_blank">View Project</a>
+            <!-- Link to live demo or repo -->
+          </div>
+          <div
+            class="project-card"
+            onclick="
+              openModal(
+                'Project Title 2',
+                'Description of your second project. Make it creative and detailed!',
+                'https://via.placeholder.com/300x200',
+              )
+            "
+          >
+            <img src="#" alt="Project 2" />
+            <h3>Project Title 2</h3>
+            <p>
+              Description of your second project. Make it creative and detailed!
+            </p>
+            <a href="#" target="_blank">View Project</a>
+          </div>
+          <!-- Duplicate this block to add more projects -->
+        </div>
+      </section>
+    </div>
+
+    <!-- Modal for Projects -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" src="" alt="Project Image" />
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
